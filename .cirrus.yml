@@ -41,8 +41,10 @@ freebsd_task:
 linux_arm_task:
   name: ARM Linux
   arm_container:
-    image: ubuntu:22.04
-    memory: 350M
+    memory: 330M
+    matrix:
+      image: ubuntu:22.04
+      image: ubuntu:24.04
 
   env:
     # Set to 10 instead of 1 to avoid problems when new commits are submitted
